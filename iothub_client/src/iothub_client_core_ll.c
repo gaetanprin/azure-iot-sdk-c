@@ -2285,6 +2285,7 @@ IOTHUB_CLIENT_RESULT IoTHubClientCore_LL_SetOption(IOTHUB_CLIENT_CORE_LL_HANDLE 
         // if this becomes necessary
         else if (strcmp(optionName, OPTION_SAS_TOKEN_REFRESH_TIME) == 0 || strcmp(optionName, OPTION_SAS_TOKEN_LIFETIME) == 0)
         {
+            LogError("****** SAS_TOKEN_LIFETIME: %lu", *(size_t*)value);
             if (IoTHubClient_Auth_Set_SasToken_Expiry(handleData->authorization_module, *(size_t*)value) != 0)
             {
                 LogError("Failed setting the Token Expiry time");
