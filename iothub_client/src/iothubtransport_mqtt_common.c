@@ -2375,7 +2375,7 @@ static int InitializeConnection(PMQTTTRANSPORT_HANDLE_DATA transport_data)
                     if ((current_time - transport_data->mqtt_connect_time) / 1000 > (sas_token_expiry*SAS_REFRESH_MULTIPLIER))
                     {
                         /* Codes_SRS_IOTHUB_TRANSPORT_MQTT_COMMON_07_058: [ If the sas token has timed out IoTHubTransport_MQTT_Common_DoWork shall disconnect from the mqtt client and destroy the transport information and wait for reconnect. ] */
-                        LogError("****** SAS Token Has Timed out %lu. DisconnectFromClient", (unsigned int) sas_token_expiry);
+                        LogError("****** SAS Token Has Timed out %u. DisconnectFromClient", (unsigned int) sas_token_expiry);
                         DisconnectFromClient(transport_data);
 
                         transport_data->transport_callbacks.connection_status_cb(IOTHUB_CLIENT_CONNECTION_UNAUTHENTICATED, IOTHUB_CLIENT_CONNECTION_EXPIRED_SAS_TOKEN, transport_data->transport_ctx);
