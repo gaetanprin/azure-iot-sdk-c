@@ -10,12 +10,12 @@
 [submodule "deps/parson"]
 	path = deps/parson
 	url = https://github.com/kgabis/parson.git
-[submodule "deps/uhttp"]
-	path = deps/uhttp
-	url = https://github.com/Azure/azure-uhttp-c.git
 [submodule "provisioning_client/deps/RIoT"]
 	path = provisioning_client/deps/RIoT
 	url = https://github.com/Microsoft/RIoT.git
 [submodule "provisioning_client/deps/utpm"]
 	path = provisioning_client/deps/utpm
 	url = https://github.com/Azure/azure-utpm-c.git
+[submodule "uhttp"]
+	path = uhttp
+	url = https://github.com/Azure/azure-uhttp-c.git

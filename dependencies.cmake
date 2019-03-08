@@ -30,7 +30,7 @@ else ()
     endif ()
 
     if (${use_http})
-        add_subdirectory(deps/uhttp)
+        add_subdirectory(uhttp)
     endif ()
 endif()
 
